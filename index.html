@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Břetislav Jirman – Odhady nemovitostí</title>
+  <meta name="description" content="Certifikovaný odhadce nemovitostí Břetislav Jirman. Odhady bytů, domů, pozemků a komerčních prostor." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-name">Břetislav Jirman</span>
+        <span class="logo-tagline">Odhady nemovitostí</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#sluzby">Služby</a>
+        <a href="#kontakt" class="btn-nav">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Odborné odhady nemovitostí</h1>
+      <p class="hero-sub">Přesné, nestranné a soudně uznávané ocenění nemovitostí pro banky, soudy, dědická řízení i soukromé účely.</p>
+      <a href="#kontakt" class="btn-primary">Požádat o odhad</a>
+    </div>
+  </section>
+
+  <!-- SLUŽBY -->
+  <section id="sluzby" class="services">
+    <div class="container">
+      <h2>Nabízené služby</h2>
+      <p class="section-sub">Provádím odborné odhady všech typů nemovitostí na území České republiky.</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Rodinné domy</h3>
+          <p>Odhad tržní nebo administrativní hodnoty rodinného domu včetně příloh a fotodokumentace.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Byty a apartmány</h3>
+          <p>Ocenění bytové jednotky v osobním nebo družstevním vlastnictví pro banky, soudy i soukromé účely.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>Pozemky</h3>
+          <p>Odhad stavebních, zemědělských i lesních pozemků. Zohledňujeme územní plán a bonitu půdy.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏭</div>
+          <h3>Komerční nemovitosti</h3>
+          <p>Ocenění kancelářských, obchodních, průmyslových a skladových prostor.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚖️</div>
+          <h3>Soudní znalecké posudky</h3>
+          <p>Posudky pro soudní řízení, dědické věci, exekuce a majetkové vypořádání.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏦</div>
+          <h3>Odhady pro banky</h3>
+          <p>Zpracování odhadů akceptovaných předními českými bankami pro účely hypotečního úvěru.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROČ JÁ -->
+  <section class="why">
+    <div class="container why-inner">
+      <div class="why-text">
+        <h2>Proč zvolit mé služby?</h2>
+        <ul class="why-list">
+          <li><span class="check">✓</span> Certifikovaný soudní znalec</li>
+          <li><span class="check">✓</span> Více než 15 let praxe v oboru</li>
+          <li><span class="check">✓</span> Posudky uznávané bankami a soudy</li>
+          <li><span class="check">✓</span> Rychlé zpracování – do 5 pracovních dnů</li>
+          <li><span class="check">✓</span> Osobní přístup a diskrétnost</li>
+        </ul>
+      </div>
+      <div class="why-cta">
+        <p>Potřebujete odhad nemovitosti?</p>
+        <a href="#kontakt" class="btn-primary">Kontaktujte mě</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p class="section-sub">Neváhejte se ozvat – rádi domluvíme termín prohlídky i podmínky zakázky.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-label">Jméno</span>
+            <span>Břetislav Jirman</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Telefon</span>
+            <a href="tel:+420000000000">+420 000 000 000</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">E-mail</span>
+            <a href="mailto:info@jirman-odhady.cz">info@jirman-odhady.cz</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Působnost</span>
+            <span>Celá Česká republika</span>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Jméno a příjmení</label>
+            <input type="text" id="name" name="name" placeholder="Vaše jméno" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.cz" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="+420 xxx xxx xxx" />
+          </div>
+          <div class="form-group">
+            <label for="message">Zpráva</label>
+            <textarea id="message" name="message" rows="4" placeholder="Popište nemovitost a účel odhadu..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Odeslat poptávku</button>
+          <p class="form-note" id="form-success" style="display:none;">✓ Zpráva byla odeslána. Ozveme se vám co nejdříve.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2024 Břetislav Jirman – Odhady nemovitostí. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
