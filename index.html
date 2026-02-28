@@ -105,46 +105,23 @@
       <h2>Kontakt</h2>
       <p class="section-sub">Neváhejte se ozvat – rádi domluvíme termín prohlídky i podmínky zakázky.</p>
 
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-label">Jméno</span>
-            <span>Břetislav Jirman</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Telefon</span>
-            <a href="tel:+420000000000">+420 000 000 000</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">E-mail</span>
-            <a href="mailto:info@jirman-odhady.cz">info@jirman-odhady.cz</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Působnost</span>
-            <span>Celá Česká republika</span>
-          </div>
+      <div class="contact-info-only">
+        <div class="contact-item">
+          <span class="contact-label">Telefon</span>
+          <a href="tel:+420604788951">604 788 951</a>
         </div>
-
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Jméno a příjmení</label>
-            <input type="text" id="name" name="name" placeholder="Vaše jméno" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="vas@email.cz" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" placeholder="+420 xxx xxx xxx" />
-          </div>
-          <div class="form-group">
-            <label for="message">Zpráva</label>
-            <textarea id="message" name="message" rows="4" placeholder="Popište nemovitost a účel odhadu..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary btn-full">Odeslat poptávku</button>
-          <p class="form-note" id="form-success" style="display:none;">✓ Zpráva byla odeslána. Ozveme se vám co nejdříve.</p>
-        </form>
+        <div class="contact-item">
+          <span class="contact-label">E-mail</span>
+          <a href="mailto:bretislav.jirman@seznam.cz">bretislav.jirman@seznam.cz</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Adresa</span>
+          <span>Václavická 1716<br>Staré Město nad Metují<br>547 01 Náchod</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">IČ</span>
+          <a href="https://rzp.gov.cz/verejne-udaje/cs/udaje/vyber-subjektu;ico=11591960;roleSubjektu=P" target="_blank" rel="noopener">11591960</a>
+        </div>
       </div>
     </div>
   </section>
@@ -152,17 +129,10 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2024 Břetislav Jirman – Odhady nemovitostí. Všechna práva vyhrazena.</p>
+      <p>&copy; 2026 Břetislav Jirman – Odhady nemovitostí. Všechna práva vyhrazena.</p>
     </div>
   </footer>
 
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('form-success').style.display = 'block';
-      e.target.reset();
-    }
-  </script>
 
 </body>
 </html>
