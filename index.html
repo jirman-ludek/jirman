@@ -8,128 +8,178 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f8f8f6;
-      color: #1a1a1a;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: #2c3e50;
+      background: #fff;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+
+    /* --- Header --- */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #dde3ec;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a5fa8;
+    }
+    .logo-tagline {
+      font-size: 0.78rem;
+      color: #6b7a8d;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* --- Main --- */
+    main {
+      flex: 1;
+      background: #f5f7fa;
+      display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
+      padding: 80px 24px;
     }
 
-    .container {
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .site-name {
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 3rem;
-    }
-
-    .card {
+    .card-link {
+      display: block;
       background: #fff;
-      border: 1px solid #e0e0d8;
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
+      border: 1px solid #dde3ec;
+      border-radius: 8px;
+      padding: 48px 40px;
+      text-align: center;
       text-decoration: none;
       color: inherit;
-      display: block;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      max-width: 460px;
+      width: 100%;
+      transition: box-shadow 0.2s, border-color 0.2s;
     }
-
-    .card:hover {
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
-      transform: translateY(-2px);
+    .card-link:hover {
+      box-shadow: 0 4px 24px rgba(26,95,168,0.12);
+      border-color: #b8cee8;
+      text-decoration: none;
     }
 
     .card-icon {
       font-size: 2.5rem;
-      margin-bottom: 1.25rem;
       display: block;
+      margin-bottom: 20px;
     }
 
     .card-title {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-      color: #1a1a1a;
+      color: #1a2e45;
+      margin-bottom: 6px;
     }
 
-    .card-subtitle {
+    .card-sub {
       font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
+      color: #5a6a7a;
+      margin-bottom: 28px;
     }
 
     .card-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 8px;
       justify-content: center;
-      margin-bottom: 1.75rem;
+      margin-bottom: 32px;
     }
 
     .tag {
-      background: #f0f0eb;
+      background: #e8f0fb;
+      color: #1a5fa8;
       border-radius: 20px;
-      padding: 0.3rem 0.85rem;
-      font-size: 0.8rem;
-      color: #444;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
     }
 
-    .card-cta {
+    .btn-primary {
       display: inline-block;
-      background: #1a1a1a;
+      background: #1a5fa8;
       color: #fff;
-      border-radius: 8px;
-      padding: 0.75rem 2rem;
-      font-size: 0.9rem;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-size: 1rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
-      transition: background 0.15s ease;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .card-link:hover .btn-primary {
+      background: #154d8a;
     }
 
-    .card:hover .card-cta {
-      background: #333;
+    /* --- Footer --- */
+    .site-footer {
+      background: #1a2e45;
+      color: #8a99ad;
+      text-align: center;
+      padding: 28px 0;
+      font-size: 0.88rem;
     }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      color: #bbb;
+    @media (max-width: 480px) {
+      .site-header .container { height: 60px; }
+      .logo-name { font-size: 1rem; }
+      .card-link { padding: 36px 24px; }
+      main { padding: 48px 16px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <p class="site-name">jirman.cz</p>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-name">jirman.cz</span>
+        <span class="logo-tagline">Náchod</span>
+      </div>
+    </div>
+  </header>
 
-    <a class="card" href="/znalec">
+  <main>
+    <a class="card-link" href="/znalec/">
       <span class="card-icon">🏠</span>
       <h1 class="card-title">Ing. Břetislav Jirman</h1>
-      <p class="card-subtitle">Odhady nemovitostí · Náchod</p>
+      <p class="card-sub">Odhady nemovitostí · Náchod</p>
       <div class="card-tags">
         <span class="tag">Certifikovaný znalec</span>
         <span class="tag">V oboru od roku 1992</span>
         <span class="tag">Soudně uznávané odhady</span>
       </div>
-      <span class="card-cta">Přejít na stránku →</span>
+      <span class="btn-primary">Přejít na stránku →</span>
     </a>
+  </main>
 
-    <footer>&copy; 2026 jirman.cz</footer>
+  <footer class="site-footer">
+    <p>&copy; 2026 Ing. Břetislav Jirman – Odhady nemovitostí. Všechna práva vyhrazena.</p>
+  </footer>
 
-  </div>
 </body>
 </html>
