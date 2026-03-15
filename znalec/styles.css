@@ -1,0 +1,295 @@
+/* ============================================================
+   Břetislav Jirman – Odhady nemovitostí
+   Profesionální, střídmý styl
+   ============================================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #2c3e50;
+  background: #fff;
+}
+
+a { color: #1a5fa8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-block;
+  background: #1a5fa8;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #154d8a; text-decoration: none; }
+
+.btn-full { width: 100%; text-align: center; }
+
+.btn-nav {
+  background: #1a5fa8;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-nav:hover { background: #154d8a; text-decoration: none; }
+
+/* --- Header --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #dde3ec;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a5fa8;
+}
+.logo-tagline {
+  font-size: 0.78rem;
+  color: #6b7a8d;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.main-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+.main-nav a:hover { color: #1a5fa8; text-decoration: none; }
+
+/* --- Hero --- */
+.hero {
+  background: linear-gradient(135deg, #1a5fa8 0%, #0d3f73 100%);
+  color: #fff;
+  padding: 96px 0 88px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.25;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  opacity: 0.88;
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+/* --- Section commons --- */
+.services, .why, .contact {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #1a2e45;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  color: #5a6a7a;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+/* --- Services grid --- */
+.services { background: #f5f7fa; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 4px 16px rgba(26,95,168,0.1);
+  border-color: #b8cee8;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e45;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  color: #5a6a7a;
+  line-height: 1.6;
+}
+
+/* --- Why section --- */
+.why { background: #fff; }
+
+.why-inner {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.why-text { flex: 1; min-width: 260px; }
+
+.why-list {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #e8f0fb;
+  color: #1a5fa8;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.why-cta {
+  background: #f5f7fa;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+  padding: 40px 36px;
+  text-align: center;
+  min-width: 240px;
+}
+
+.why-cta p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a2e45;
+  margin-bottom: 20px;
+}
+
+/* --- Contact --- */
+.contact { background: #f5f7fa; }
+
+.contact-info-only {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #8a99ad;
+  font-weight: 600;
+}
+
+.contact-item span, .contact-item a {
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: #1a2e45;
+  color: #8a99ad;
+  text-align: center;
+  padding: 28px 0;
+  font-size: 0.88rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  .why-inner {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .why-cta { width: 100%; }
+
+  .hero { padding: 64px 0 56px; }
+
+  .main-nav { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .site-header .container { height: 60px; }
+  .logo-name { font-size: 1rem; }
+}
