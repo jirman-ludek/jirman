@@ -220,26 +220,46 @@ h2 {
 
 .when-list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 36px;
 }
 
 .when-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background: #f5f7fa;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #fff;
+  border: 1px solid #e4eaf3;
   border-radius: 8px;
-  border-left: 3px solid #1a5fa8;
   font-size: 0.96rem;
-  color: #2c3e50;
+  color: #1a2e45;
   font-weight: 500;
-  transition: background 0.15s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
-.when-list li:hover { background: #eef2f8; }
+
+.when-list li:hover {
+  border-color: #b8cee8;
+  box-shadow: 0 3px 10px rgba(26,95,168,0.1);
+}
+
+.when-list li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: #1a5fa8;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
 
 /* --- Why section --- */
 .why { background: #f5f7fa; }
