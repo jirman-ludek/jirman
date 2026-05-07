@@ -4,25 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Arakis Digital</title>
-    <meta name="description" content="Arakis Digital, z.s.p.o. – hosting na vlastním HW a podpora 24/7.">
+    <meta name="description" content="Arakis Digital, z.s.p.o. – hosting na vlastním HW, správa domén, webové prezentace, podpora 24/7.">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            height: 100%;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333333;
             background-color: #ffffff;
             display: flex;
@@ -30,19 +22,18 @@
             min-height: 100vh;
         }
 
-        .page-wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px 40px;
+        /* ── Header ── */
+        .page-header {
+            text-align: center;
+            padding: 56px 20px 36px;
+            background: #ffffff;
         }
 
         .logo-wrap {
+            display: inline-block;
             width: 100%;
-            max-width: 400px;
-            margin-bottom: 40px;
+            max-width: 340px;
+            margin-bottom: 32px;
         }
 
         .logo-wrap img {
@@ -51,55 +42,129 @@
             display: block;
         }
 
-        .content {
-            text-align: center;
-            max-width: 680px;
-            width: 100%;
-        }
-
-        .content h1 {
-            font-size: 36px;
+        h1 {
+            font-size: 34px;
             font-weight: 300;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: #24aac7;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .company-info {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555555;
-        }
-
-        .company-info p {
-            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #666666;
         }
 
         .company-info .company-name {
             font-weight: 600;
-            font-size: 18px;
+            font-size: 15px;
             color: #333333;
-            margin-bottom: 10px;
         }
 
-        .divider {
-            width: 60px;
-            height: 2px;
-            background-color: #24aac7;
-            margin: 24px auto;
+        /* ── Illustration banner ── */
+        .illustration {
+            width: 100%;
+            background: linear-gradient(135deg, #0e2340 0%, #142c4d 40%, #1a4a6b 70%, #24aac7 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            overflow: hidden;
+            line-height: 0;
         }
 
-        .services {
+        .illustration svg {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+        }
+
+        /* ── Main content ── */
+        .main-content {
+            flex: 1;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 28px 52px;
+            width: 100%;
+        }
+
+        .intro {
             font-size: 16px;
+            color: #444444;
+            margin-bottom: 40px;
             line-height: 1.8;
-            color: #555555;
-            font-style: italic;
         }
 
+        /* ── Section headings ── */
+        .section-heading {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #24aac7;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0f4f8;
+        }
+
+        /* ── Services list ── */
+        .services-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .services-list li {
+            position: relative;
+            padding: 12px 0 12px 22px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.7;
+        }
+
+        .services-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 21px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #24aac7;
+            flex-shrink: 0;
+        }
+
+        .services-list li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* ── Target audience ── */
+        .target {
+            background: #f4fbfd;
+            border-left: 3px solid #24aac7;
+            padding: 20px 24px;
+            font-size: 15px;
+            color: #444444;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* ── Divider ── */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #24aac7;
+            margin: 0 0 36px 0;
+        }
+
+        /* ── Contact ── */
         .contact-block {
-            margin-top: 10px;
-            font-size: 16px;
+            font-size: 15px;
             color: #555555;
         }
 
@@ -112,67 +177,206 @@
             text-decoration: underline;
         }
 
+        /* ── Footer ── */
         footer {
             background-color: #142c4d;
-            color: #ffffff;
+            color: rgba(255,255,255,0.7);
             text-align: center;
-            padding: 20px;
+            padding: 18px 20px;
             font-size: 13px;
             font-weight: 300;
         }
 
-        footer a {
-            color: #ffffff;
-            text-decoration: underline;
+        /* ── Company info block ── */
+        .meta-block {
+            background: #f8f8f8;
+            border-radius: 4px;
+            padding: 20px 24px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.9;
         }
 
-        footer a:hover {
-            text-decoration: none;
+        .meta-block .company-name {
+            font-weight: 600;
+            font-size: 15px;
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
         }
 
         @media (max-width: 600px) {
-            .content h1 {
-                font-size: 26px;
-            }
-
-            .logo-wrap {
-                max-width: 260px;
-            }
+            h1 { font-size: 24px; letter-spacing: 2px; }
+            .logo-wrap { max-width: 240px; }
+            .main-content { padding: 36px 18px 44px; }
         }
     </style>
 </head>
 <body>
-    <div class="page-wrapper">
+
+    <!-- Header -->
+    <div class="page-header">
         <div class="logo-wrap">
             <img src="img/arakis_digital.svg" alt="Arakis Digital">
         </div>
-        <div class="content">
-            <h1>Arakis Digital</h1>
-            <div class="company-info">
-                <p class="company-name">Arakis Digital, z.s.p.o.</p>
-                <p>České Budějovice 3, Otakarova 1364/45, 370 01 České Budějovice</p>
-                <p>IČ: 70957622, zapsána v OR vedeném Krajským soudem v Českých Budějovicích,<br>
-                   spisová značka C 23763</p>
-                <p>DIČ: CZ70957622, neplátce DPH</p>
-                <p>datová schránka: dph39th</p>
-            </div>
-            <div class="divider"></div>
-            <div class="services">
-                <p>Hosting na vlastním HW a podpora 24/7, garance dostupnosti až na&nbsp;99,9%, SLA,
-                registra a správa domén, zajištění správy a zpracování webových prezentací,
-                microsite apod.</p>
-            </div>
-            <div class="divider"></div>
-            <div class="contact-block">
-                <p>Kontakt:
-                   <a href="mailto:info@arakis-digital.cz">info@arakis-digital.cz</a>,
-                   <a href="tel:+420283881790">+420&nbsp;283&nbsp;881&nbsp;790</a>
-                </p>
-            </div>
+        <h1>Arakis Digital</h1>
+        <div class="company-info">
+            <span class="company-name">Arakis Digital, z.s.p.o.</span><br>
+            České Budějovice 3, Otakarova 1364/45, 370 01 České Budějovice<br>
+            IČ: 70957622 &nbsp;·&nbsp; DIČ: CZ70957622, neplátce DPH<br>
+            zapsána v OR vedeném Krajským soudem v Českých Budějovicích, sp. zn. C 23763<br>
+            datová schránka: dph39th
         </div>
     </div>
+
+    <!-- Illustration -->
+    <div class="illustration">
+        <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Background grid lines -->
+            <g stroke="rgba(36,170,199,0.12)" stroke-width="1">
+                <line x1="0" y1="40"  x2="900" y2="40"/>
+                <line x1="0" y1="80"  x2="900" y2="80"/>
+                <line x1="0" y1="120" x2="900" y2="120"/>
+                <line x1="0" y1="160" x2="900" y2="160"/>
+                <line x1="0" y1="200" x2="900" y2="200"/>
+                <line x1="100" y1="0" x2="100" y2="220"/>
+                <line x1="200" y1="0" x2="200" y2="220"/>
+                <line x1="300" y1="0" x2="300" y2="220"/>
+                <line x1="400" y1="0" x2="400" y2="220"/>
+                <line x1="500" y1="0" x2="500" y2="220"/>
+                <line x1="600" y1="0" x2="600" y2="220"/>
+                <line x1="700" y1="0" x2="700" y2="220"/>
+                <line x1="800" y1="0" x2="800" y2="220"/>
+            </g>
+
+            <!-- Server rack left -->
+            <rect x="60" y="50" width="110" height="140" rx="4" fill="none" stroke="#24aac7" stroke-width="1.5" opacity="0.6"/>
+            <rect x="68" y="62" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="68" y="82" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="68" y="102" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="68" y="122" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="68" y="142" width="94" height="14" rx="2" fill="#24aac7" opacity="0.10"/>
+            <rect x="68" y="162" width="94" height="14" rx="2" fill="#24aac7" opacity="0.10"/>
+            <!-- LED dots -->
+            <circle cx="152" cy="69"  r="3" fill="#24aac7" opacity="0.9"/>
+            <circle cx="152" cy="89"  r="3" fill="#5bba45" opacity="0.9"/>
+            <circle cx="152" cy="109" r="3" fill="#5bba45" opacity="0.9"/>
+            <circle cx="152" cy="129" r="3" fill="#24aac7" opacity="0.9"/>
+            <circle cx="152" cy="149" r="3" fill="#5bba45" opacity="0.6"/>
+            <circle cx="152" cy="169" r="3" fill="#5bba45" opacity="0.6"/>
+
+            <!-- Server rack right -->
+            <rect x="730" y="50" width="110" height="140" rx="4" fill="none" stroke="#24aac7" stroke-width="1.5" opacity="0.6"/>
+            <rect x="738" y="62" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="738" y="82" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="738" y="102" width="94" height="14" rx="2" fill="#24aac7" opacity="0.15"/>
+            <rect x="738" y="122" width="94" height="14" rx="2" fill="#24aac7" opacity="0.10"/>
+            <rect x="738" y="142" width="94" height="14" rx="2" fill="#24aac7" opacity="0.10"/>
+            <rect x="738" y="162" width="94" height="14" rx="2" fill="#24aac7" opacity="0.08"/>
+            <circle cx="822" cy="69"  r="3" fill="#5bba45" opacity="0.9"/>
+            <circle cx="822" cy="89"  r="3" fill="#5bba45" opacity="0.9"/>
+            <circle cx="822" cy="109" r="3" fill="#24aac7" opacity="0.9"/>
+            <circle cx="822" cy="129" r="3" fill="#5bba45" opacity="0.6"/>
+            <circle cx="822" cy="149" r="3" fill="#24aac7" opacity="0.6"/>
+            <circle cx="822" cy="169" r="3" fill="#5bba45" opacity="0.6"/>
+
+            <!-- Central hub -->
+            <circle cx="450" cy="110" r="36" fill="none" stroke="#24aac7" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="450" cy="110" r="24" fill="rgba(36,170,199,0.08)" stroke="#24aac7" stroke-width="1" opacity="0.7"/>
+            <circle cx="450" cy="110" r="10" fill="rgba(36,170,199,0.25)" stroke="#24aac7" stroke-width="1"/>
+            <!-- Pulse ring -->
+            <circle cx="450" cy="110" r="46" fill="none" stroke="#24aac7" stroke-width="0.5" opacity="0.25"/>
+
+            <!-- Connection lines: racks → hub -->
+            <line x1="170" y1="110" x2="414" y2="110" stroke="#24aac7" stroke-width="1" opacity="0.4" stroke-dasharray="6 4"/>
+            <line x1="730" y1="110" x2="486" y2="110" stroke="#24aac7" stroke-width="1" opacity="0.4" stroke-dasharray="6 4"/>
+
+            <!-- Sub-nodes -->
+            <circle cx="310" cy="60"  r="10" fill="rgba(36,170,199,0.1)" stroke="#24aac7" stroke-width="1" opacity="0.7"/>
+            <circle cx="310" cy="160" r="10" fill="rgba(36,170,199,0.1)" stroke="#24aac7" stroke-width="1" opacity="0.7"/>
+            <circle cx="590" cy="60"  r="10" fill="rgba(36,170,199,0.1)" stroke="#24aac7" stroke-width="1" opacity="0.7"/>
+            <circle cx="590" cy="160" r="10" fill="rgba(36,170,199,0.1)" stroke="#24aac7" stroke-width="1" opacity="0.7"/>
+
+            <line x1="310" y1="60"  x2="420" y2="96"  stroke="#24aac7" stroke-width="0.8" opacity="0.3"/>
+            <line x1="310" y1="160" x2="420" y2="124" stroke="#24aac7" stroke-width="0.8" opacity="0.3"/>
+            <line x1="590" y1="60"  x2="480" y2="96"  stroke="#24aac7" stroke-width="0.8" opacity="0.3"/>
+            <line x1="590" y1="160" x2="480" y2="124" stroke="#24aac7" stroke-width="0.8" opacity="0.3"/>
+
+            <!-- Domain / globe icon at center -->
+            <text x="450" y="114" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#24aac7" opacity="0.9">●</text>
+
+            <!-- Label -->
+            <text x="450" y="178" text-anchor="middle" font-family="'Open Sans', sans-serif" font-size="11" fill="rgba(255,255,255,0.35)" letter-spacing="2">INFRASTRUKTURA</text>
+        </svg>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <p class="intro">
+            Arakis Digital, z.s.p.o. je zájmové sdružení právnických osob se sídlem v&nbsp;Českých Budějovicích.
+            Sdružuje společnosti z&nbsp;různých oborů, kterým a&nbsp;jejichž obchodním partnerům od&nbsp;roku&nbsp;2018
+            poskytuje komplexní zázemí pro&nbsp;provoz IT&nbsp;služeb — od&nbsp;hostingu na&nbsp;vlastní infrastruktuře
+            přes správu domén až&nbsp;po&nbsp;vývoj a&nbsp;údržbu webových prezentací.
+        </p>
+
+        <div class="section-heading">Naše služby</div>
+        <ul class="services-list">
+            <li>
+                <strong>Hosting na vlastním hardwaru</strong> —
+                služby provozujeme na vlastní infrastruktuře pod přímou správou, bez závislosti na externích poskytovatelích.
+            </li>
+            <li>
+                <strong>Garantovaná dostupnost až 99,9&nbsp;%</strong> —
+                smluvně ošetřené parametry kvality služeb formou SLA.
+            </li>
+            <li>
+                <strong>Technická podpora 24/7</strong> —
+                nepřetržitý monitoring infrastruktury a dostupnost technického týmu.
+            </li>
+            <li>
+                <strong>Registrace a správa domén</strong> —
+                komplexní správa doménového portfolia včetně DNS, obnov a převodů.
+            </li>
+            <li>
+                <strong>Správa webových prezentací a microsite</strong> —
+                technický provoz, údržba a infrastrukturní zázemí firemních webů, kampaňových stránek a portálů.
+            </li>
+            <li>
+                <strong>Poradenství v oblasti informačních technologií a zpracování dat</strong> —
+                pro členské společnosti a jejich klienty.
+            </li>
+        </ul>
+
+        <div class="section-heading">Komu jsou služby určeny</div>
+        <div class="target">
+            Služby Arakis Digital jsou určeny primárně členským společnostem sdružení a&nbsp;jejich obchodním partnerům.
+            Zajišťujeme stabilní a&nbsp;bezpečný provoz aplikací, webových služeb a&nbsp;datové infrastruktury,
+            na&nbsp;které se&nbsp;spoléhá koncový byznys našich klientů.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="meta-block">
+            <span class="company-name">Arakis Digital, z.s.p.o.</span>
+            České Budějovice 3, Otakarova 1364/45, 370 01 České Budějovice<br>
+            IČ: 70957622 &nbsp;·&nbsp; DIČ: CZ70957622, neplátce DPH<br>
+            zapsána v OR vedeném Krajským soudem v Českých Budějovicích, spisová značka C 23763<br>
+            datová schránka: dph39th
+        </div>
+
+        <div class="contact-block">
+            Kontakt:
+            <a href="mailto:info@arakis-digital.cz">info@arakis-digital.cz</a>,
+            <a href="tel:+420283881790">+420&nbsp;283&nbsp;881&nbsp;790</a>
+        </div>
+
+    </main>
+
     <footer>
         &copy; Arakis Digital, z.s.p.o.
     </footer>
+
 </body>
 </html>
