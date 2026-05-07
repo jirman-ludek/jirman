@@ -1,0 +1,32 @@
+# robots.txt pro https://arakis-digital.cz/
+# Povoluje všem vyhledávačům indexovat web
+
+User-agent: *
+Allow: /
+
+# Blokování AI scraperů (volitelné — pokud nechcete, aby se obsah dostal do trénovacích dat AI modelů)
+# Pokud blokovat nechcete, smažte následující bloky.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://arakis-digital.cz/sitemap.xml
