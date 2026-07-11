@@ -1,0 +1,250 @@
+/************/
+/*Index.html*/
+/************/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: Arial, sans-serif;
+	/*letter-spacing: 0.2px;*/ /*For IE9*/
+}
+
+body {
+	color: #ffffff;
+	font-size: 12px;
+	background: #2a0d00;
+}
+
+h2 {
+	font-size: 16px;
+	text-decoration: underline;
+	color: #ce6131;
+	padding-bottom: 12px;
+}
+
+.mega_container {
+	position: absolute;
+	width: 100%;
+}
+
+.container {
+	width: 776px;
+	position: relative;
+	margin: auto auto;
+}
+
+.container_in {
+	float: left;
+	width: 776px;
+	background: #000000;
+}
+
+.heading1 {
+	width: 726px;
+	height: 10px;
+	border-bottom: 2px solid #3C3C3C;
+	background-color: #3D3D3D;
+	margin-left: 25px;
+}
+
+.heading2 {
+	width: 726px;
+	height: 21px;
+	background: url("../images/heading2_bg.png");
+	border-top: 1px solid #2F2F2F;
+	margin-left: 25px;
+}
+
+.heading3 {
+	width: 750px;
+	height: 163px;
+	background: #A43A0C;
+	margin-left: 13px;
+}
+
+.logo {
+	display: block;
+	width: 214px;
+	height: 163px;
+	float: left;
+	background: url("../images/logo.png");
+	margin-left: 25px;
+	text-align: center;
+}
+
+.logo .eurokom {
+	font-size: 29px;
+	color: #a43a0c;
+	padding-top: 98px;
+}
+
+.logo  .servis {
+	margin-top: -8px;
+	font-size: 25px;
+	color: #919191;
+}
+
+.headpic {
+	width: 214px;
+	height: 163px;
+	float: left;
+	background: #4d1700;
+}
+
+.headline {
+	width: 214px;
+	height: 163px;
+	float: left;
+	background: url("../images/headline_bg.png") right no-repeat;
+	background-color: #4D1700;
+}
+
+.headline .p1 {
+	font-size: 13px;
+	color: #f2a483;
+	padding: 10px 21px 0px 21px;
+	line-height: 20px;
+}
+
+.headline .ford {
+	padding-top: 0px;
+	color: #ffffff;
+	float: right;
+}
+
+.main_section {
+	position: relative;
+	float: left;
+	width: 726px;
+	background: url("../images/menu_bg.png") left repeat-y;
+	margin-top: 6px;
+	margin-left: 25px;
+}
+
+.menu {
+	width: 227px;
+	float: left;
+}
+
+.menu_top {
+	width: 227px;
+	height: 11px;
+	background: url("../images/menu_top_bg.png");
+}
+
+.services {
+	width: 159px;
+	height: 29px;
+	margin-left: 29px;
+	margin-top: 5px;
+	border-bottom: 1px solid #5C1D02;
+	background: url("../images/circle_white.png") center left no-repeat;
+	font-size: 16px;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #ffffff;
+	padding-left: 27px;
+}
+
+.menu .margin1 {
+	margin-top: 0px;
+}
+
+.menu .margin2 {
+	margin-top: 5px;
+}
+
+.menu_button {
+	display: block;
+	width: 159px;
+	height: 29px;
+	margin-left: 29px;
+	border-bottom: 1px solid #5C1D02;
+	background: url("../images/circle_red.png") center left no-repeat;
+	font-size: 16px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-decoration: none;
+	color: #898989;
+	padding-left: 27px;
+}
+
+.menu_button:hover {
+	background: url("../images/circle_white.png") center left no-repeat;
+	color: #ffffff;
+}
+
+.content {
+	padding-left: 78px;
+	padding-top: 8px;
+	width: 421px;
+	float: left;
+	border-top: 11px solid #242424;
+	background: url("../images/content_bg.png") 6px -1px no-repeat;
+	background-color: #252525;
+}
+
+.content .highlighted {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 18px;
+	padding-right: 18px;
+	line-height: 20px;
+}
+
+.content .normal {
+	padding-bottom: 18px;
+	padding-right: 18px;
+	line-height: 18px;
+}
+
+.content ul {
+	padding-bottom: 18px;
+	padding-right: 18px;
+	list-style-position: inside;
+}
+
+/*.content .padding_right {
+	padding-right: 139px;
+}*/
+
+.content .picture1 {
+	float: right;
+	width: 121px;
+	height: 121px;
+	background: #000000;
+	margin: -9px 9px 9px 9px;
+}
+
+.menu_bottom {
+	position: absolute;
+	width: 227px;
+	height: 9px;
+	bottom: 0;
+	left: 0;
+	background: url("../images/menu_bottom_bg.png");
+}
+
+.footer {
+	clear: left;
+	width: 737px;
+	height: 31px;
+	background: #A43A0C;
+	margin-left: 13px;
+	line-height: 31px;
+	padding-left: 13px;
+	vertical-align: middle;
+}
+
+.link1 {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.footer .line1 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
